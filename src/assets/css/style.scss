@@ -10,6 +10,9 @@
 	outline: none;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
+    ::-webkit-scrollbar{
+        display: none;
+    }
 }
 body {
 	font-family: "GT-Eesti", Arial, Helvetica, sans-serif;
@@ -126,7 +129,7 @@ input{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 90%;
+        width: 95%;
         gap: 10px;
         color: white;
         .Category{
@@ -155,13 +158,13 @@ input{
                 align-items: center;
             .itm1{
                 display: flex;
-                justify-content: center;
                 width: 90%;
+                overflow: scroll;
                 flex: 1;
                 gap: 20px;
                 h1{
                     height:400px;
-                    width: 350px;
+                    min-width: 300px;
                     cursor: pointer;
                     overflow: hidden;
                     &:hover{
@@ -170,6 +173,7 @@ input{
                     img{
                         width: 100%;
                         display: block;
+                        object-fit: cover;
                     }
                 }
             }    
@@ -211,11 +215,10 @@ input{
          justify-content: center;
          align-items: flex-start;
          height: 80%;
-         width: 80%;
          margin: auto;
          color: white;
         .infoimg{
-            width: 100%;
+            min-width: 500px;
             height: 100%;
             overflow: hidden;
             img{
@@ -306,6 +309,7 @@ input{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100%;
     background-image: url('./../image/login.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -473,29 +477,7 @@ input{
                }
             }
         }
-        .CardHolder{
-            .cardcontent{
-                .cards{
-                    .itm1{
-                        display: none;
-                        h1{
-                            height: fit-content;
-                            width: 315px;
-                        }
-                    }
-                    .itm2{
-                        display: flex;
-                        h1{
-                            height: fit-content;
-                            width: 315px;
-                        }
-                    }
-                   
-                   
-                }
-            }
-            
-        }
+        
         .Infopage{
             flex-direction: column;
             .infoimg{

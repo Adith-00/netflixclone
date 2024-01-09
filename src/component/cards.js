@@ -34,26 +34,16 @@ const Cards = ({ category ,data}) => {
     <div className="CardHolder">
       <h1 className="Category">{category}</h1>
       {data?<div className="cardcontent"> 
-         {last>5 &&  <i onClick={ previous}  className="Sliders"><span class="material-symbols-outlined">arrow_back_ios</span></i> }
           <div className="cards">
-            <div className="itm1"> {data?.slice(first ,last).map((item, index) => (
-                item && (
+            <div className="itm1"> 
+            {data?.map((item, index) => (
                   <h1 key={index} onClick={()=>onclickfun(item)} onMouseOver={() => handleHover(item)}>
                     <img src={item?.Poster} alt={"filimcard"} />
                   </h1>
-                )
-              ))}</div>
-              <div className="itm2">
-                 {data?.slice(first ,last-3).map((item, index) => (
-                item && (
-                  <h1 key={index} onClick={()=>onclickfun(item)} onMouseOver={() => handleHover(item)}>
-                    <img src={item?.Poster} alt={"filimcard"} />
-                  </h1>
-                )
-              ))}</div>
+              ))}
+              </div>
            
           </div>
-         {last<data.length && <i onClick={next} className="Sliders"><span class="material-symbols-outlined">arrow_forward_ios</span></i> } 
       </div>:<LoadingSpin />}
       
     </div>

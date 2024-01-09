@@ -11,6 +11,9 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
+* ::-webkit-scrollbar {
+  display: none;
+}
 
 body {
   font-family: "GT-Eesti", Arial, Helvetica, sans-serif;
@@ -133,7 +136,7 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 95%;
   gap: 10px;
   color: white;
 }
@@ -165,14 +168,14 @@ input {
 }
 .netflix .CardHolder .cardcontent .cards .itm1 {
   display: flex;
-  justify-content: center;
   width: 90%;
+  overflow: scroll;
   flex: 1;
   gap: 20px;
 }
 .netflix .CardHolder .cardcontent .cards .itm1 h1 {
   height: 400px;
-  width: 350px;
+  min-width: 300px;
   cursor: pointer;
   overflow: hidden;
 }
@@ -182,6 +185,8 @@ input {
 .netflix .CardHolder .cardcontent .cards .itm1 h1 img {
   width: 100%;
   display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .netflix .CardHolder .cardcontent .cards .itm2 {
   display: flex;
@@ -210,12 +215,11 @@ input {
   justify-content: center;
   align-items: flex-start;
   height: 80%;
-  width: 80%;
   margin: auto;
   color: white;
 }
 .netflix .Infopage .infoimg {
-  width: 100%;
+  min-width: 500px;
   height: 100%;
   overflow: hidden;
 }
@@ -302,6 +306,7 @@ input {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100%;
   background-image: url("./../image/login.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -434,22 +439,6 @@ input {
   }
   .netflix .hero .info .about {
     font-size: 14px;
-  }
-  .netflix .CardHolder .cardcontent .cards .itm1 {
-    display: none;
-  }
-  .netflix .CardHolder .cardcontent .cards .itm1 h1 {
-    height: -moz-fit-content;
-    height: fit-content;
-    width: 315px;
-  }
-  .netflix .CardHolder .cardcontent .cards .itm2 {
-    display: flex;
-  }
-  .netflix .CardHolder .cardcontent .cards .itm2 h1 {
-    height: -moz-fit-content;
-    height: fit-content;
-    width: 315px;
   }
   .netflix .Infopage {
     flex-direction: column;

@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledFooter= styled.footer`
 background-color: #101010;
+width: 100%;
 padding: 50px;
 ul{
     list-style: none;
